@@ -18,14 +18,14 @@ Sample API Calls
 
 1. Register a device
 
-	ua.registerDevice("< token >", function(error) {...});
+	ua.registerDevice(ua.IOS, "< token >", function(error) {...});
 
 2. Create payloads for the push notification API needed.
 
 	Information available here.
 	http://urbanairship.com/docs/push.html
 
-	Push Notification Examples: 
+	Push Notification Examples:
 
 		a)	"/api/push/"
 
@@ -59,7 +59,8 @@ Sample API Calls
 
 3. Unregister a device.
 
-	ua.unregisterDevice("< token >", function(error) {....});
+	ua.unregisterDevice(ua.IOS, "< token >", function(error) {....});
 
 
-
+Platform specs: On some calls it's necesasry to specify the platform of the recipient.
+	Use the ua.IOS or the ua.ANDROID constants.
